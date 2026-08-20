@@ -7,55 +7,217 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: #f8fafc; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: #f0f4f8;
+            color: #334155;
+        }
         html { scroll-behavior: smooth; }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
 
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+
+        
         #lightbox {
             display: none;
             position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.92);
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.9);
             z-index: 9999;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            padding: 20px;
+            padding: 16px;
         }
         #lightbox.active { display: flex; }
         #lightbox img {
             max-width: 90vw;
             max-height: 80vh;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border-radius: 6px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
         }
         #lightbox .caption {
-            color: #e2e8f0;
-            margin-top: 16px;
-            font-size: 14px;
-            text-align: center;
-            max-width: 600px;
+            color: #cbd5e1;
+            margin-top: 12px;
+            font-size: 13px;
         }
         #lightbox .close-btn {
             position: absolute;
-            top: 16px;
-            right: 24px;
+            top: 12px;
+            right: 20px;
             color: white;
-            font-size: 40px;
+            font-size: 36px;
             cursor: pointer;
-            line-height: 1;
-            opacity: 0.8;
-            transition: opacity 0.2s;
+            opacity: 0.7;
         }
         #lightbox .close-btn:hover { opacity: 1; }
+
+        
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 22px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        
+        .card-hover {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+
+        
+        .skill-box {
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 14px;
+            background: #f8fafc;
+            transition: border-color 0.15s;
+        }
+        .skill-box:hover {
+            border-color: #3b82f6;
+        }
+
+    
+        .skill-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 10px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #475569;
+            cursor: default;
+            transition: all 0.1s;
+        }
+        .skill-item:hover {
+            background: #eff6ff;
+            border-color: #93c5fd;
+            color: #1e40af;
+        }
+ 
+        .link-live {
+            color: #059669;
+            font-size: 11px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .link-live:hover {
+            text-decoration: underline;
+        }
+
+        
+        .link-gh {
+            color: #2563eb;
+            font-size: 11px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .link-gh:hover {
+            text-decoration: underline;
+        }
+
+    
+        .link-foto {
+            color: #3b82f6;
+            font-size: 11px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .link-foto:hover {
+            color: #1d4ed8;
+        }
+
+        
+        .nav-item {
+            color: #2563eb;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+        }
+        .nav-item:hover {
+            color: #1e3a8a;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: #2563eb;
+            transition: width 0.2s;
+        }
+        .nav-item:hover::after {
+            width: 100%;
+        }
+
+        
+        .badge {
+            font-size: 10px;
+            background: #f1f5f9;
+            color: #64748b;
+            padding: 2px 8px;
+            border-radius: 999px;
+        }
+
+    
+        .project-item {
+            padding-top: 12px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 7px 13px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #475569;
+            text-decoration: none;
+            transition: background 0.15s;
+        }
+        .contact-btn:hover {
+            background: #f1f5f9;
+        }
+
+        
+        .section-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+    
+        @keyframes muncul {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .muncul {
+            animation: muncul 0.4s ease-out;
+        }
     </style>
 <base target="_blank">
-<base target="_blank">
 </head>
-<body class="text-slate-700 antialiased min-h-screen pb-16">
+<body class="min-h-screen pb-16">
 
     <div id="lightbox" onclick="closeLightbox(event)">
         <span class="close-btn">&times;</span>
@@ -63,47 +225,48 @@
         <p class="caption" id="lightbox-caption"></p>
     </div>
 
-    <header class="flex flex-col items-center pt-10 pb-6 px-4 text-center">
+    <header class="flex flex-col items-center pt-10 pb-6 px-4 text-center muncul">
         <div class="relative w-28 h-28 mb-5">
-            <div class="absolute inset-0 bg-blue-400 rounded-full blur-lg opacity-30"></div>
+            <div class="absolute inset-0 bg-blue-400 rounded-full blur-xl opacity-25"></div>
             <img src="foto-profil.jpg" alt="M Hilmi Haikal" 
-                 class="relative object-cover w-full h-full rounded-full border-4 border-white shadow-md"
+                 class="relative object-cover w-full h-full rounded-full border-4 border-white shadow"
                  onerror="this.src='https://via.placeholder.com/112?text=FP'">
         </div>
         <h1 class="text-2xl font-bold text-slate-900">M Hilmi Haikal</h1>
         <p class="text-sm text-slate-500 mt-1">Web Developer | Mahasiswa Sistem Informasi</p>
 
-        <nav class="flex gap-5 mt-6 text-xs font-semibold tracking-wide text-blue-600 uppercase">
-            <a href="#about" class="hover:text-blue-800">About</a>
-            <a href="#experience" class="hover:text-blue-800">Experience</a>
-            <a href="#projects" class="hover:text-blue-800">Projects</a>
-            <a href="#academic" class="hover:text-blue-800">Academic</a>
-            <a href="#contact" class="hover:text-blue-800">Contact</a>
+        <nav class="flex gap-5 mt-6">
+            <a href="#about" class="nav-item">About</a>
+            <a href="#experience" class="nav-item">Experience</a>
+            <a href="#projects" class="nav-item">Projects</a>
+            <a href="#academic" class="nav-item">Academic</a>
+            <a href="#skills" class="nav-item">Skills</a>
+            <a href="#contact" class="nav-item">Contact</a>
         </nav>
     </header>
 
-    <main class="max-w-2xl mx-auto px-4 sm:px-6 space-y-5">
+    <main class="max-w-2xl mx-auto px-4 space-y-5">
 
-        <section id="about" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-            <h2 class="text-lg font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100">Tentang Saya</h2>
-            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+        <section id="about" class="card muncul">
+            <h2 class="section-title">Tentang Saya</h2>
+            <p class="text-sm text-slate-600 leading-relaxed mb-3">
                 Halo, saya Hilmi. Mahasiswa Sistem Informasi yang lagi belajar jadi web developer. 
                 Saya suka ngoding pakai PHP dan Laravel, meskipun masih sering stack overflow. 
                 Portofolio ini saya buat buat nyimpan project-project saya selama kuliah dan ngoding sendiri.
             </p>
-            <p class="text-slate-500 text-xs italic">
+            <p class="text-xs text-slate-500 italic">
                 "Belajar sambil bikin, bikin sambil belajar."
             </p>
         </section>
 
-        <section id="experience" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-            <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Pengalaman & Organisasi</h2>
+        <section id="experience" class="card card-hover muncul">
+            <h2 class="section-title">Pengalaman & Organisasi</h2>
 
             <div class="space-y-5">
                 <div>
                     <div class="flex items-start justify-between flex-wrap gap-1">
                         <div>
-                            <h3 class="font-semibold text-slate-900 text-sm">HIMPUNAN MAHASISWA SISTEM INFORMASI (HIMASI)</h3>
+                            <h3 class="font-semibold text-slate-900 text-sm">Himpunan Mahasiswa Sistem Informasi (HIMASI)</h3>
                             <p class="text-xs text-blue-600 font-medium">Divisi External — Anggota</p>
                         </div>
                     </div>
@@ -114,8 +277,8 @@
                         <li>Membantu penyusunan dan distribusi informasi eksternal</li>
                     </ul>
                     <div class="flex gap-3 mt-3">
-                        <a href="javascript:void(0)" onclick="openLightbox('Apresiasi Ketua Pelaksana.jpg', 'Kegiatan Santunan Anak Yatim HIMASI')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
-                        <a href="javascript:void(0)" onclick="openLightbox('hima-foto2.jpg', 'Rapat HIMASI')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                        <span onclick="openLightbox('Apresiasi Ketua Pelaksana.jpg', 'Kegiatan Santunan Anak Yatim HIMASI')" class="link-foto">Lihat foto</span>
+                        <span onclick="openLightbox('hima-foto2.jpg', 'Rapat HIMASI')" class="link-foto">Lihat foto</span>
                     </div>
                 </div>
 
@@ -125,7 +288,7 @@
                             <h3 class="font-semibold text-slate-900 text-sm">Agensi Z — Divisi Conceptual</h3>
                             <p class="text-xs text-blue-600 font-medium">Freelance</p>
                         </div>
-                        <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Jul - Agu 2025</span>
+                        <span class="badge">Jul - Agu 2025</span>
                     </div>
                     <ul class="mt-2 text-xs text-slate-600 space-y-1 list-disc pl-4 leading-relaxed">
                         <li>Terlibat dalam produksi konten media sosial (ide, riset tren, dan copywriting ringan)</li>
@@ -134,7 +297,7 @@
                         <li>Meningkatkan kemampuan kerja sama tim, komunikasi dan kreativitas dalam digital</li>
                     </ul>
                     <div class="flex gap-3 mt-3">
-                        <a href="javascript:void(0)" onclick="openLightbox('agensi-foto1.jpg', 'Konten Agensi Z')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                        <span onclick="openLightbox('agensi-foto1.jpg', 'Konten Agensi Z')" class="link-foto">Lihat foto</span>
                     </div>
                 </div>
 
@@ -144,7 +307,7 @@
                             <h3 class="font-semibold text-slate-900 text-sm">Wedding Organizer - Amb Planner</h3>
                             <p class="text-xs text-blue-600 font-medium">Content Creator — Freelance</p>
                         </div>
-                        <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Sep - Feb</span>
+                        <span class="badge">Sep - Feb</span>
                     </div>
                     <ul class="mt-2 text-xs text-slate-600 space-y-1 list-disc pl-4 leading-relaxed">
                         <li>Mengambil foto dan video selama acara (prewedding, akad, resepsi)</li>
@@ -153,22 +316,23 @@
                         <li>Bekerja sama dengan fotografer, videografer dan tim dokumentasi lain</li>
                     </ul>
                     <div class="flex gap-3 mt-3">
-                        <a href="javascript:void(0)" onclick="openLightbox('wo-foto1.jpg', 'Dokumentasi WO')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                        <span onclick="openLightbox('wo-foto1.jpg', 'Dokumentasi WO')" class="link-foto">Lihat foto</span>
                     </div>
                 </div>
             </div>
         </section>    
 
-        <section id="projects" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-            <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Projects (Github)</h2>
+        
+        <section id="projects" class="card card-hover muncul">
+            <h2 class="section-title">Projects (Github)</h2>
             <div class="space-y-4">
 
-                <div class="group pt-3 border-t border-slate-100">
+                <div class="project-item">
                     <div class="flex items-start justify-between">
                         <h3 class="text-sm font-semibold text-slate-900">Go Learning</h3>
                         <div class="flex gap-2">
-                            <a href="https://golearning.infinityfree.me" target="_blank" class="text-[10px] text-emerald-600 hover:underline font-medium">Live Site &rarr;</a>
-                            <a href="https://github.com/hilmieh/Go_Learning" target="_blank" class="text-[10px] text-blue-600 hover:underline">GitHub &rarr;</a>
+                            <a href="https://golearning.infinityfree.me" target="_blank" class="link-live">Live Site &rarr;</a>
+                            <a href="https://github.com/hilmieh/Go_Learning" target="_blank" class="link-gh">GitHub &rarr;</a>
                         </div>
                     </div>
                     <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
@@ -176,17 +340,17 @@
                         <li>Menyediakan sistem navigasi jelas antar modul pembelajaran untuk belajar mandiri.</li>
                         <li>Mengoptimalkan tampilan dan performa agar responsif di berbagai perangkat.</li>
                     </ul>
-                    <div class="flex gap-3 mt-2">
-                        <a href="javascript:void(0)" onclick="openLightbox('golearning-ss.jpg', 'Screenshot Go Learning')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                    <div class="mt-2">
+                        <span onclick="openLightbox('golearning-ss.jpg', 'Screenshot Go Learning')" class="link-foto">Lihat foto</span>
                     </div>
                 </div>
 
-                <div class="group pt-3 border-t border-slate-100">
+                <div class="project-item">
                     <div class="flex items-start justify-between">
                         <h3 class="text-sm font-semibold text-slate-900">Wedding Invitation</h3>
                         <div class="flex gap-2">
-                            <a href="https://wedding-invitiation-raflli-alizza.vercel.app/" target="_blank" class="text-[10px] text-emerald-600 hover:underline font-medium">Live Site &rarr;</a>
-                            <a href="https://github.com/hilmieh/Wedding-Invitiation_Raflli-Alizza" target="_blank" class="text-[10px] text-blue-600 hover:underline">GitHub &rarr;</a>
+                            <a href="https://wedding-invitiation-raflli-alizza.vercel.app/" target="_blank" class="link-live">Live Site &rarr;</a>
+                            <a href="https://github.com/hilmieh/Wedding-Invitiation_Raflli-Alizza" target="_blank" class="link-gh">GitHub &rarr;</a>
                         </div>
                     </div>
                     <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
@@ -194,63 +358,196 @@
                         <li>Merancang tampilan estetis dan personal dengan informasi acara yang mudah ditemukan.</li>
                         <li>Memastikan akses lancar di berbagai ukuran layar dan browser, terutama mobile.</li>
                     </ul>
-                    <div class="flex gap-3 mt-2">
-                        <a href="javascript:void(0)" onclick="openLightbox('wedding-ss.jpg', 'Screenshot Wedding Invitation')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                    <div class="mt-2">
+                        <span onclick="openLightbox('wedding-ss.jpg', 'Screenshot Wedding Invitation')" class="link-foto">Lihat foto</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="academic" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-            <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Project Akademik</h2>
+    
+        <section id="academic" class="card card-hover muncul">
+            <h2 class="section-title">Project Akademik</h2>
             <p class="text-xs text-slate-500 mb-5">Project Kuliah yang belum sempat di-upload ke GitHub</p>
             <div class="space-y-6">
 
                 <div class="pb-2">
                     <div class="flex items-center justify-between">
                         <h3 class="text-sm font-semibold text-slate-900">Sistem Informasi Akademik</h3>
-                        <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Semester 3</span>
+                        <span class="badge">Semester 3</span>
                     </div>
                     <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
                         <li>Merancang platform pengolahan data akademik mahasiswa dalam satu sistem terintegrasi.</li>
                         <li>Memastikan akses informasi akademik secara real-time dan terstruktur untuk mahasiswa dan admin.</li>
                         <li>Mengimplementasikan desain responsif dengan navigasi jelas di desktop maupun mobile.</li>
                     </ul>
-                    <div class="flex gap-3 mt-3">
-                        <a href="javascript:void(0)" onclick="openLightbox('Dokumentasi-Akademik.jpg', 'Screenshot Sistem Informasi Akademik')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                    <div class="mt-3">
+                        <span onclick="openLightbox('Dokumentasi-Akademik.jpg', 'Screenshot Sistem Informasi Akademik')" class="link-foto">Lihat foto</span>
                     </div>
                 </div>    
 
                 <div class="pb-2">
                     <div class="flex items-center justify-between">
                         <h3 class="text-sm font-semibold text-slate-900">Sistem Informasi Warehouse</h3>
-                        <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Semester 4</span>
+                        <span class="badge">Semester 4</span>
                     </div>
                     <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
                         <li>Mengembangkan sistem manajemen data barang dan stok gudang secara digital menggantikan pencatatan manual.</li>
                         <li>Membangun fitur pencarian, kategori barang, dan pemantauan stok masuk/keluar secara real-time.</li>
                         <li>Menyajikan antarmuka sederhana namun fungsional agar mudah dioperasikan di berbagai perangkat.</li>
                     </ul>
-                    <div class="flex gap-3 mt-3">
-                        <a href="javascript:void(0)" onclick="openLightbox('warehouse-ss.jpg', 'Screenshot Sistem Informasi Warehouse')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                    <div class="mt-3">
+                        <span onclick="openLightbox('warehouse-ss.jpg', 'Screenshot Sistem Informasi Warehouse')" class="link-foto">Lihat foto</span>
                     </div>
                 </div> 
             </div>
         </section>   
 
-        <section id="contact" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
-            <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Kontak</h2>
+        <section id="skills" class="card card-hover muncul">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="space-y-3">
+
+                <div class="skill-box">
+                    <div class="flex items-center gap-2 mb-2">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                        <h3 class="text-sm font-semibold text-slate-800">Back End</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                            Rest API
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                            Database Management SQL
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            GitHub (Version Control)
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="flex items-center gap-2 mb-2">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                        <h3 class="text-sm font-semibold text-slate-800">Frontend Development</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            HTML
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                            CSS
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            JavaScript (Dasar)
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            Responsive Web Design
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="flex items-center gap-2 mb-2">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                        <h3 class="text-sm font-semibold text-slate-800">CMS & Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                            WordPress (Dasar)
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Elementor
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            Git/GitHub
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            VS Code
+                         </span>
+                    </div>
+                </div>
+                 <div class="skill-box">
+                    <div class="flex items-center gap-2 mb-2">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <h3 class="text-sm font-semibold text-slate-800">Soft Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            Komunikasi
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            Kerja Sama Tim
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Manajemen Waktu
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                            Problem Solving
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            Adaptabilitas
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            Kreativitas
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Leadership
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <section id="contact" class="card muncul">
+            <h2 class="section-title">Kontak</h2>
             <div class="flex flex-wrap gap-3 text-xs">
-                <a href="mailto:mhilmihaikal81@gmail.com" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
+                <a href="mailto:mhilmihaikal81@gmail.com" class="contact-btn">
                     <span>&#9993;</span> Email
                 </a>
-                <a href="https://github.com/hilmieh" target="_blank" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
+                <a href="https://github.com/hilmieh" target="_blank" class="contact-btn">
                    <span>&#128187;</span> GitHub 
                 </a>
-                <a href="https://linkedin.com/in/hilmihaikalll_/" target="_blank" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
+                <a href="https://linkedin.com/in/hilmihaikalll_/" target="_blank" class="contact-btn">
                    <span>&#128279;</span> LinkedIn 
                 </a>
-                <a href="https://instagram.com/hilmihaikalll_/" target="_blank" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
+                <a href="https://instagram.com/hilmihaikalll_/" target="_blank" class="contact-btn">
                    <span>&#128247;</span> Instagram 
                 </a>
             </div>
@@ -263,15 +560,14 @@
     </footer>
 
     <script>
+
         function openLightbox(src, caption){
-            const lb = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            const cap = document.getElementById('lightbox-caption');
-            img.src = src;
-            cap.textContent = caption || '';
-            lb.classList.add('active');
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-caption').textContent = caption || '';
+            document.getElementById('lightbox').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
+
         function closeLightbox(e) {
             if (e.target.id === 'lightbox' || e.target.classList.contains('close-btn')) {
                 document.getElementById('lightbox').classList.remove('active');
