@@ -51,16 +51,8 @@
             transition: opacity 0.2s;
         }
         #lightbox .close-btn:hover { opacity: 1; }
-
-        .thumb {
-            cursor: pointer;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-        .thumb:hover {
-            transform: scale(1.03);
-            opacity: 0.85;
-        }
     </style>
+<base target="_blank">
 <base target="_blank">
 </head>
 <body class="text-slate-700 antialiased min-h-screen pb-16">
@@ -122,14 +114,8 @@
                         <li>Membantu penyusunan dan distribusi informasi eksternal</li>
                     </ul>
                     <div class="flex gap-3 mt-3">
-                        <img src="Apresiasi Ketua Pelaksana.jpg" alt="Kegiatan Santunan Anak Yatim HIMASI" 
-                             class="thumb w-20 h-14 object-cover rounded-lg border border-slate-200" 
-                             onclick="openLightbox(this.src, this.alt)"
-                             onerror="showTextLink(this)">
-                        <img src="hima-foto2.jpg" alt="Rapat HIMASI" 
-                             class="thumb w-20 h-14 object-cover rounded-lg border border-slate-200" 
-                             onclick="openLightbox(this.src, this.alt)"
-                             onerror="showTextLink(this)">
+                        <a href="javascript:void(0)" onclick="openLightbox('Apresiasi Ketua Pelaksana.jpg', 'Kegiatan Santunan Anak Yatim HIMASI')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                        <a href="javascript:void(0)" onclick="openLightbox('hima-foto2.jpg', 'Rapat HIMASI')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
                     </div>
                 </div>
 
@@ -148,10 +134,7 @@
                         <li>Meningkatkan kemampuan kerja sama tim, komunikasi dan kreativitas dalam digital</li>
                     </ul>
                     <div class="flex gap-3 mt-3">
-                        <img src="agensi-foto1.jpg" alt="Konten Agensi Z" 
-                             class="thumb w-20 h-14 object-cover rounded-lg border border-slate-200" 
-                             onclick="openLightbox(this.src, this.alt)"
-                             onerror="showTextLink(this)">
+                        <a href="javascript:void(0)" onclick="openLightbox('agensi-foto1.jpg', 'Konten Agensi Z')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
                     </div>
                 </div>
 
@@ -170,155 +153,138 @@
                         <li>Bekerja sama dengan fotografer, videografer dan tim dokumentasi lain</li>
                     </ul>
                     <div class="flex gap-3 mt-3">
-                        <img src="wo-foto1.jpg" alt="Dokumentasi WO" 
-                             class="thumb w-20 h-14 object-cover rounded-lg border border-slate-200" 
-                             onclick="openLightbox(this.src, this.alt)"
-                             onerror="showTextLink(this)">
-                        
+                        <a href="javascript:void(0)" onclick="openLightbox('wo-foto1.jpg', 'Dokumentasi WO')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
                     </div>
                 </div>
-            </section>    
+            </div>
+        </section>    
 
-    <section id="projects" class="bg-white rounded-2x1 p-6 shadow-sm border border-slate-100">
-        <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Projects (Github)</h2>
-        <div class="space-y-4">
+        <section id="projects" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+            <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Projects (Github)</h2>
+            <div class="space-y-4">
 
-            <div class="group pt-3 border-t border-slate-100">
-                <div class="flex items-start justify-between">
-                    <h3 class="text-sm font-semibold text-slate-900">Go Learning</h3>
-                    <a href="https://golearning.infinityfree.me" target="_blank" class="text-[10px] text-emerald-600 hover:underline font-medium">Live Site &rarr;</a>
-                    <a href="https://github.com/hilmieh/Go_Learning" target="_blank" class="text-[10px] text-blue-600 hover:underline">Github →</a>
-                </div>
-                <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
+                <div class="group pt-3 border-t border-slate-100">
+                    <div class="flex items-start justify-between">
+                        <h3 class="text-sm font-semibold text-slate-900">Go Learning</h3>
+                        <div class="flex gap-2">
+                            <a href="https://golearning.infinityfree.me" target="_blank" class="text-[10px] text-emerald-600 hover:underline font-medium">Live Site &rarr;</a>
+                            <a href="https://github.com/hilmieh/Go_Learning" target="_blank" class="text-[10px] text-blue-600 hover:underline">GitHub &rarr;</a>
+                        </div>
+                    </div>
+                    <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
                         <li>Mengembangkan platform pembelajaran interaktif dengan tampilan utama yang clean dan intuitif.</li>
                         <li>Menyediakan sistem navigasi jelas antar modul pembelajaran untuk belajar mandiri.</li>
                         <li>Mengoptimalkan tampilan dan performa agar responsif di berbagai perangkat.</li>
                     </ul>
-                <div class="flex gap-3 mt-2">
-                    <img src="go learnig-jpg" alt="Screenshot Go Learning"
-                         class="thumb w-24 h-14 object-cover rounded-lg border border-slate-200"
-                         onclick="openLightbox(this.src, this.alt)"
-                         onerror="showTextLink(this)">
-                   </div>
-
-             <div class="group pt-3 border-t border-slate-100">
-                <div class="flex items-start justify-between">
-                    <h3 class="text-sm font-semibold text-slate-900">Wedding Invitation</h3>
-                    <a href="https://wedding-invitiation-raflli-alizza.vercel.app/" target="_blank" class="text-[10px] text-emerald-600 hover:underline font-medium">Live Site &rarr;</a>
-                    <a href="https://github.com/hilmieh/wedding-invitation_Raflli-Alizza" target="_blank" class="text-[10px] text-blue-600 hover:underline">GitHub →</a>
+                    <div class="flex gap-3 mt-2">
+                        <a href="javascript:void(0)" onclick="openLightbox('golearning-ss.jpg', 'Screenshot Go Learning')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                    </div>
                 </div>
-                <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
+
+                <div class="group pt-3 border-t border-slate-100">
+                    <div class="flex items-start justify-between">
+                        <h3 class="text-sm font-semibold text-slate-900">Wedding Invitation</h3>
+                        <div class="flex gap-2">
+                            <a href="https://wedding-invitiation-raflli-alizza.vercel.app/" target="_blank" class="text-[10px] text-emerald-600 hover:underline font-medium">Live Site &rarr;</a>
+                            <a href="https://github.com/hilmieh/Wedding-Invitiation_Raflli-Alizza" target="_blank" class="text-[10px] text-blue-600 hover:underline">GitHub &rarr;</a>
+                        </div>
+                    </div>
+                    <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
                         <li>Membuat undangan pernikahan digital sebagai alternatif praktis dan ramah lingkungan.</li>
                         <li>Merancang tampilan estetis dan personal dengan informasi acara yang mudah ditemukan.</li>
                         <li>Memastikan akses lancar di berbagai ukuran layar dan browser, terutama mobile.</li>
+                    </ul>
                     <div class="flex gap-3 mt-2">
-                    <img src="wedding-ss.jpg" alt="Screenshot Wedding Invitation"
-                         class="thumb w-24 h-14 object-cover rounded-lg border border-slate-200"
-                         onclick="openLightbox(this.src, this.alt)"
-                         onerror="showTextLink(this)">
+                        <a href="javascript:void(0)" onclick="openLightbox('wedding-ss.jpg', 'Screenshot Wedding Invitation')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                    </div>
                 </div>
-             </div>
-        </div>
-    </section>
-    
-    <section id="academic" class="bg-white rounded-2x1 p-6 shadow-sm border border-slate-100">
-        <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Project Akademik</h2>
-        <p class="text-xs text-slate-500 mb-5">Project Kuliah Yang belum sempat di upload ke Github</p>
-        <div class="space-y-6">
+            </div>
+        </section>
 
-             <div class="pb-2">
-                <div class="flex items-center justify-between">
-                    <h3 class="text-sm font-semibold text-slate-900">Sistem Informasi Akademik</h3>
-                    <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0,5 rounded-full">Semester 3</span>
-                </div>
-                 <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
-                    <li>Merancang platform pengolahan data akademik mahasiswa dalam satu sistem terintegrasi.</li>
+        <section id="academic" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+            <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Project Akademik</h2>
+            <p class="text-xs text-slate-500 mb-5">Project Kuliah yang belum sempat di-upload ke GitHub</p>
+            <div class="space-y-6">
+
+                <div class="pb-2">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-semibold text-slate-900">Sistem Informasi Akademik</h3>
+                        <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Semester 3</span>
+                    </div>
+                    <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
+                        <li>Merancang platform pengolahan data akademik mahasiswa dalam satu sistem terintegrasi.</li>
                         <li>Memastikan akses informasi akademik secara real-time dan terstruktur untuk mahasiswa dan admin.</li>
                         <li>Mengimplementasikan desain responsif dengan navigasi jelas di desktop maupun mobile.</li>
-                <div class="flex gap-3 mt-3">
-                    <img src="Dokumentasi Akademik.jpg" alt="Screenshot Wedding Invitation"
-                         class="thumb w-24 h-14 object-cover rounded-lg border border-slate-200"
-                         onclick="openLightbox(this.src, this.alt)"
-                         onerror="showTextLink(this)">
-             </div>
-        </div>    
-        <div class="pb-2">
-        <div class="flex items-center justify-between">
-            <h3 class="text-sm font-semibold text-slate-900">Sistem Informasi Warehouse</h3>
-            <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0,5 rounded-full">Semester 4</span>
-        </div>
-        <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
-            <li>Merancang platform pengolahan data akademik mahasiswa dalam satu sistem terintegrasi.</li>
-            <li>Memastikan akses informasi akademik secara real-time dan terstruktur untuk mahasiswa dan admin.</li>
-            <li>Mengimplementasikan desain responsif dengan navigasi jelas di desktop maupun mobile.</li>
-        </ul>
-        <div class="flex gap-3 mt-3">
-            <img src="  " alt="Screenshot Wedding Invitation"
-                         class="thumb w-24 h-14 object-cover rounded-lg border border-slate-200"
-                         onclick="openLightbox(this.src, this.alt)"
-                         onerror="showTextLink(this)">
-        </div>
-    </div> 
-</section>   
+                    </ul>
+                    <div class="flex gap-3 mt-3">
+                        <a href="javascript:void(0)" onclick="openLightbox('Dokumentasi-Akademik.jpg', 'Screenshot Sistem Informasi Akademik')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                    </div>
+                </div>    
 
-<section id="contact" class="bg-white rounded 2x1 p-6 shadow-sm border border-slate-100">
-    <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Kontak</h2>
-    <div class="flex flex-wrap gap-3 text-xs">
-        <a href="mailto:mhilmihaikal81@gmail.com" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
-            <span>📧</span> Email
-        </a>
-        <a href="https//github.com/hilmieh" target="_blank" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
-           <span>💻</span> GitHub 
-        </a>
-        <a href="https//linkedin.com/in/hilmihaikalll_/" target="_blank" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
-           <span>🔗</span> LinkedIn 
-        </a>
-        <a href="https//instagram.com/hilmihaikalll_/" target="_blank" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-color">
-           <span>📷</span> Instagram 
-        </a>
-    </div>
-</section>
+                <div class="pb-2">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-semibold text-slate-900">Sistem Informasi Warehouse</h3>
+                        <span class="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full">Semester 4</span>
+                    </div>
+                    <ul class="mt-2 text-xs text-slate-500 space-y-1 list-disc pl-4 leading-relaxed">
+                        <li>Mengembangkan sistem manajemen data barang dan stok gudang secara digital menggantikan pencatatan manual.</li>
+                        <li>Membangun fitur pencarian, kategori barang, dan pemantauan stok masuk/keluar secara real-time.</li>
+                        <li>Menyajikan antarmuka sederhana namun fungsional agar mudah dioperasikan di berbagai perangkat.</li>
+                    </ul>
+                    <div class="flex gap-3 mt-3">
+                        <a href="javascript:void(0)" onclick="openLightbox('warehouse-ss.jpg', 'Screenshot Sistem Informasi Warehouse')" class="text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline">Lihat foto</a>
+                    </div>
+                </div> 
+            </div>
+        </section>   
 
-</main>
+        <section id="contact" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+            <h2 class="text-lg font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100">Kontak</h2>
+            <div class="flex flex-wrap gap-3 text-xs">
+                <a href="mailto:mhilmihaikal81@gmail.com" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
+                    <span>&#9993;</span> Email
+                </a>
+                <a href="https://github.com/hilmieh" target="_blank" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
+                   <span>&#128187;</span> GitHub 
+                </a>
+                <a href="https://linkedin.com/in/hilmihaikalll_/" target="_blank" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
+                   <span>&#128279;</span> LinkedIn 
+                </a>
+                <a href="https://instagram.com/hilmihaikalll_/" target="_blank" class="flex items-center gap-1.5 px-3 py-2 bg-slate-50 hover:bg-slate-100 rounded-lg transition-colors">
+                   <span>&#128247;</span> Instagram 
+                </a>
+            </div>
+        </section>
 
-<footer class="text-center text-[10px] text-slate-400 mt-8 pb-6">
-    Dibuat dengan semangat dan sepenuh hati - 2026
-</footer>
+    </main>
 
-<script>
-    function openLightbox(src, caption){
-        const lb = document.getElementById('lightbox');
-        const img = document.getElementById('lightbox-img');
-        const cap = document.getElementById('lightbox-caption');
-        img.src = src;
-        cap.textContent = caption ||'';
-        lb.clasicList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox(e) {
-        if (e,target.id === 'lightbox'|| e.target.clasicList.contains('close-btn')) {}
-           document.getElementById('lightbox').classList.remove('active');
-           document.body,style.overflow = '';
+    <footer class="text-center text-[10px] text-slate-400 mt-8 pb-6">
+        Dibuat dengan semangat dan sepenuh hati - 2026
+    </footer>
+
+    <script>
+        function openLightbox(src, caption){
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            img.src = src;
+            cap.textContent = caption || '';
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
-    
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            document.getElementById('lightbox').clasicList.remove('active');
-            document.body.style.overflow = '';
+        function closeLightbox(e) {
+            if (e.target.id === 'lightbox' || e.target.classList.contains('close-btn')) {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
         }
-    });
 
-    function showTextLink(img) {
-        const link = document.createElement('span');
-        link.className = 'text-[11px] text-blue-500 hover:text-blue-700 cursor-pointer underline';
-        link.textContent = '📷 Lihat foto';
-        link.onclick = function() {
-            alert('foto belum di-upoad ke GitHub.\n\nUpload file: ' + img.src.split('/').pop());
-
-        };
-        img.parentNode.replaceChild(link, img);
-    }
-</script>          
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>          
 </body>
 </html>
