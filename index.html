@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        
+    
         body { 
             font-family: 'Inter', sans-serif; 
             background: #f0f4f8;
@@ -19,7 +19,6 @@
         ::-webkit-scrollbar-track { background: #e2e8f0; }
         ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
 
-        
         #lightbox {
             display: none;
             position: fixed;
@@ -54,7 +53,7 @@
         }
         #lightbox .close-btn:hover { opacity: 1; }
 
-        
+    
         .card {
             background: white;
             border-radius: 14px;
@@ -72,7 +71,6 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.08);
         }
 
-        
         .skill-box {
             border: 1px solid #e2e8f0;
             border-radius: 10px;
@@ -84,7 +82,6 @@
             border-color: #3b82f6;
         }
 
-    
         .skill-item {
             display: inline-flex;
             align-items: center;
@@ -103,7 +100,8 @@
             border-color: #93c5fd;
             color: #1e40af;
         }
- 
+
+        
         .link-live {
             color: #059669;
             font-size: 11px;
@@ -114,7 +112,7 @@
             text-decoration: underline;
         }
 
-        
+    
         .link-gh {
             color: #2563eb;
             font-size: 11px;
@@ -125,7 +123,7 @@
             text-decoration: underline;
         }
 
-    
+
         .link-foto {
             color: #3b82f6;
             font-size: 11px;
@@ -172,7 +170,7 @@
             border-radius: 999px;
         }
 
-    
+        
         .project-item {
             padding-top: 12px;
             border-top: 1px solid #e2e8f0;
@@ -206,7 +204,6 @@
             border-bottom: 1px solid #e2e8f0;
         }
 
-    
         @keyframes muncul {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -219,12 +216,14 @@
 </head>
 <body class="min-h-screen pb-16">
 
+    
     <div id="lightbox" onclick="closeLightbox(event)">
         <span class="close-btn">&times;</span>
         <img id="lightbox-img" src="" alt="">
         <p class="caption" id="lightbox-caption"></p>
     </div>
 
+    
     <header class="flex flex-col items-center pt-10 pb-6 px-4 text-center muncul">
         <div class="relative w-28 h-28 mb-5">
             <div class="absolute inset-0 bg-blue-400 rounded-full blur-xl opacity-25"></div>
@@ -247,41 +246,45 @@
 
     <main class="max-w-2xl mx-auto px-4 space-y-5">
 
+        
         <section id="about" class="card muncul">
             <h2 class="section-title">Tentang Saya</h2>
             <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                Halo, saya Hilmi. Mahasiswa Sistem Informasi yang lagi belajar jadi web developer. 
-                Saya suka ngoding pakai PHP dan Laravel, meskipun masih sering stack overflow. 
-                Portofolio ini saya buat buat nyimpan project-project saya selama kuliah dan ngoding sendiri.
+                Saya M. Hilmi Haikal, mahasiswa Sistem Informasi yang berfokus pada Web Development, 
+                khususnya pemrosesan Back-End dengan PHP & Laravel serta pengelolaan database. 
+                Memiliki pengalaman dalam membangun aplikasi web interaktif, sistem informasi manajemen, 
+                dan terbiasa berkolaborasi dalam tim.Berkat pengalaman di bidang komunikasi dan organisasi, saya terbiasa menerjemahkan kebutuhan pengguna (requirements) menjadi solusi teknis yang terstruktur dalam tim.
             </p>
             <p class="text-xs text-slate-500 italic">
                 "Belajar sambil bikin, bikin sambil belajar."
             </p>
         </section>
 
+    
         <section id="experience" class="card card-hover muncul">
             <h2 class="section-title">Pengalaman & Organisasi</h2>
 
             <div class="space-y-5">
+                
                 <div>
                     <div class="flex items-start justify-between flex-wrap gap-1">
                         <div>
-                            <h3 class="font-semibold text-slate-900 text-sm">Himpunan Mahasiswa Sistem Informasi (HIMASI)</h3>
+                            <h3 class="font-semibold text-slate-900 text-sm">HIMPUNAN MAHASISWA SISTEM INFORMASI (HIMASI)</h3>
                             <p class="text-xs text-blue-600 font-medium">Divisi External — Anggota</p>
                         </div>
                     </div>
                     <ul class="mt-2 text-xs text-slate-600 space-y-1 list-disc pl-4 leading-relaxed">
-                        <li>Menjadi Ketua Pelaksana Proker Santunan Anak Yatim</li>
-                        <li>Membantu koordinasi kegiatan yang melibatkan pihak eksternal</li>
-                        <li>Mendukung kelancaran acara himpunan</li>
-                        <li>Membantu penyusunan dan distribusi informasi eksternal</li>
+                        <li>Memimpin proyek kegiatan sosial sebagai Ketua Pelaksana, mengelola koordinasi tim, alokasi sumber daya, dan penyusunan timeline.</li>
+                        <li>Membangun komunikasi dan hubungan kerja sama profesional dengan pihak eksternal.</li>
+                        <li>Mengasah kemampuan leadership dan manajemen proyek dalam skala organisasi kampus.</li>
                     </ul>
                     <div class="flex gap-3 mt-3">
                         <span onclick="openLightbox('Apresiasi Ketua Pelaksana.jpg', 'Kegiatan Santunan Anak Yatim HIMASI')" class="link-foto">Lihat foto</span>
-                        <span onclick="openLightbox('hima-foto2.jpg', 'Rapat HIMASI')" class="link-foto">Lihat foto</span>
+                    
                     </div>
                 </div>
 
+                <!-- Agensi Z -->
                 <div class="pt-4 border-t border-slate-100">
                     <div class="flex items-start justify-between flex-wrap gap-1">
                         <div>
@@ -291,16 +294,16 @@
                         <span class="badge">Jul - Agu 2025</span>
                     </div>
                     <ul class="mt-2 text-xs text-slate-600 space-y-1 list-disc pl-4 leading-relaxed">
-                        <li>Terlibat dalam produksi konten media sosial (ide, riset tren, dan copywriting ringan)</li>
-                        <li>Membantu tim dalam editing menggunakan Canva dan Capcut</li>
-                        <li>Berkontribusi dalam diskusi tim internal dan perencanaan konten promosi</li>
-                        <li>Meningkatkan kemampuan kerja sama tim, komunikasi dan kreativitas dalam digital</li>
+                        <li>Berkolaborasi dalam tim untuk mengeksekusi kebutuhan klien (requirement) sesuai deadline yang ditentukan.</li>
+                        <li>Menerjemahkan brief klien menjadi konsep visual dan konten digital yang komunikatif.</li>
+                        <li>Mengasah kemampuan problem solving dan adaptabilitas dalam menghadapi perubahan kebutuhan klien.</li>
                     </ul>
                     <div class="flex gap-3 mt-3">
-                        <span onclick="openLightbox('agensi-foto1.jpg', 'Konten Agensi Z')" class="link-foto">Lihat foto</span>
+                        <span onclick="openLightbox('agensi-foto1.jpg', )" class="link-foto">Lihat foto</span>
                     </div>
                 </div>
 
+                
                 <div class="pt-4 border-t border-slate-100">
                     <div class="flex items-start justify-between flex-wrap gap-1">
                         <div>
@@ -310,10 +313,9 @@
                         <span class="badge">Sep - Feb</span>
                     </div>
                     <ul class="mt-2 text-xs text-slate-600 space-y-1 list-disc pl-4 leading-relaxed">
-                        <li>Mengambil foto dan video selama acara (prewedding, akad, resepsi)</li>
-                        <li>Membuat konten promosi sebelum acara (teaser, poster digital, countdown)</li>
-                        <li>Membuat konsep konten yang menarik sesuai trend (reels, cinematic, story instagram)</li>
-                        <li>Bekerja sama dengan fotografer, videografer dan tim dokumentasi lain</li>
+                        <li>Mengelola alur kerja pemrosesan konten digital secara adaptif dan cepat di situasi live event.</li>
+                        <li>Bekerja sama lintas tim (fotografer, videografer, & tim acara) untuk memastikan kelancaran dokumentasi sesuai standar mutu.</li>
+                        <li>Menjaga attention to detail dan manajemen waktu di bawah tekanan deadline acara.</li>
                     </ul>
                     <div class="flex gap-3 mt-3">
                         <span onclick="openLightbox('wo-foto1.jpg', 'Dokumentasi WO')" class="link-foto">Lihat foto</span>
@@ -327,6 +329,7 @@
             <h2 class="section-title">Projects (Github)</h2>
             <div class="space-y-4">
 
+                
                 <div class="project-item">
                     <div class="flex items-start justify-between">
                         <h3 class="text-sm font-semibold text-slate-900">Go Learning</h3>
@@ -340,11 +343,18 @@
                         <li>Menyediakan sistem navigasi jelas antar modul pembelajaran untuk belajar mandiri.</li>
                         <li>Mengoptimalkan tampilan dan performa agar responsif di berbagai perangkat.</li>
                     </ul>
+                    <div class="flex flex-wrap gap-1.5 mt-2">
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">Laravel</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">CSS</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">JavaScript</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">Bootstrap</span>
+                    </div>
                     <div class="mt-2">
                         <span onclick="openLightbox('golearning-ss.jpg', 'Screenshot Go Learning')" class="link-foto">Lihat foto</span>
                     </div>
                 </div>
 
+        
                 <div class="project-item">
                     <div class="flex items-start justify-between">
                         <h3 class="text-sm font-semibold text-slate-900">Wedding Invitation</h3>
@@ -358,6 +368,12 @@
                         <li>Merancang tampilan estetis dan personal dengan informasi acara yang mudah ditemukan.</li>
                         <li>Memastikan akses lancar di berbagai ukuran layar dan browser, terutama mobile.</li>
                     </ul>
+                    <div class="flex flex-wrap gap-1.5 mt-2">
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">HTML</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">CSS</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">JavaScript</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">Tailwind CSS</span>
+                    </div>
                     <div class="mt-2">
                         <span onclick="openLightbox('wedding-ss.jpg', 'Screenshot Wedding Invitation')" class="link-foto">Lihat foto</span>
                     </div>
@@ -365,12 +381,13 @@
             </div>
         </section>
 
-    
+        
         <section id="academic" class="card card-hover muncul">
             <h2 class="section-title">Project Akademik</h2>
             <p class="text-xs text-slate-500 mb-5">Project Kuliah yang belum sempat di-upload ke GitHub</p>
             <div class="space-y-6">
 
+                
                 <div class="pb-2">
                     <div class="flex items-center justify-between">
                         <h3 class="text-sm font-semibold text-slate-900">Sistem Informasi Akademik</h3>
@@ -381,11 +398,18 @@
                         <li>Memastikan akses informasi akademik secara real-time dan terstruktur untuk mahasiswa dan admin.</li>
                         <li>Mengimplementasikan desain responsif dengan navigasi jelas di desktop maupun mobile.</li>
                     </ul>
-                    <div class="mt-3">
+                    <div class="flex flex-wrap gap-1.5 mt-2">
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">HTML</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">CSS</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">JavaScript</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">MySQL</span>
+                    </div>
+                    <div class="mt-2">
                         <span onclick="openLightbox('Dokumentasi-Akademik.jpg', 'Screenshot Sistem Informasi Akademik')" class="link-foto">Lihat foto</span>
                     </div>
                 </div>    
 
+        
                 <div class="pb-2">
                     <div class="flex items-center justify-between">
                         <h3 class="text-sm font-semibold text-slate-900">Sistem Informasi Warehouse</h3>
@@ -396,18 +420,25 @@
                         <li>Membangun fitur pencarian, kategori barang, dan pemantauan stok masuk/keluar secara real-time.</li>
                         <li>Menyajikan antarmuka sederhana namun fungsional agar mudah dioperasikan di berbagai perangkat.</li>
                     </ul>
-                    <div class="mt-3">
+                    <div class="flex flex-wrap gap-1.5 mt-2">
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">HTML</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">CSS</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">JavaScript</span>
+                        <span class="badge" style="background:#dbeafe;color:#1e40af;">MySQL</span>
+                    </div>
+                    <div class="mt-2">
                         <span onclick="openLightbox('warehouse-ss.jpg', 'Screenshot Sistem Informasi Warehouse')" class="link-foto">Lihat foto</span>
                     </div>
                 </div> 
             </div>
         </section>   
 
+        
         <section id="skills" class="card card-hover muncul">
             <h2 class="section-title">Skills</h2>
 
             <div class="space-y-3">
-
+                
                 <div class="skill-box">
                     <div class="flex items-center gap-2 mb-2">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -420,20 +451,29 @@
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            PHP
+                        </span>
+                        <span class="skill-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            Laravel
+                        </span>
+                        <span class="skill-item">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
                             Rest API
                         </span>
                         <span class="skill-item">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                            Database Management SQL
+                            MySQL
                         </span>
                         <span class="skill-item">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                            GitHub (Version Control)
+                            GitHub
                         </span>
                     </div>
                 </div>
 
+                
                 <div class="skill-box">
                     <div class="flex items-center gap-2 mb-2">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -441,7 +481,7 @@
                             <line x1="8" y1="21" x2="16" y2="21"/>
                             <line x1="12" y1="17" x2="12" y2="21"/>
                         </svg>
-                        <h3 class="text-sm font-semibold text-slate-800">Frontend Development</h3>
+                        <h3 class="text-sm font-semibold text-slate-800">Frontend </h3>
                     </div>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-item">
@@ -463,6 +503,7 @@
                     </div>
                 </div>
 
+                
                 <div class="skill-box">
                     <div class="flex items-center gap-2 mb-2">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -490,7 +531,9 @@
                          </span>
                     </div>
                 </div>
-                 <div class="skill-box">
+
+                
+                <div class="skill-box">
                     <div class="flex items-center gap-2 mb-2">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
@@ -534,7 +577,7 @@
             </div>
         </section>
 
-    
+        <!-- contact -->
         <section id="contact" class="card muncul">
             <h2 class="section-title">Kontak</h2>
             <div class="flex flex-wrap gap-3 text-xs">
